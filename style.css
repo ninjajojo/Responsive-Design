@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+
+  .navleft {
+    grid-area: navleft;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .navright {
+    grid-area: navright;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: right;
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+ 
+  .header {
+    grid-area: header;
+    height: 100px;
+    font-size: 20px;
+    background: purple;
+    text-align: center;
+    align-content: center;
+    color: white;
+  }
+  
+  .left {
+    grid-area: left;
+    padding: 10px;
+    margin: 5px;
+    background-color: aqua;
+  }
+
+  .right {
+    grid-area: right;
+    padding: 10px;
+    margin: 5px;
+    background-color: aqua;
+  }
+
+  .left h2, 
+  .right h2 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .left p,
+  .right p {
+    font-size: 17px;
+    text-align: justify;
+  }
+ 
+  .footer {
+    grid-area: footer;
+    height: 30px;
+    background: purple;
+    text-align: center;
+    align-content: center;
+  }
+ 
+  footer p {
+    color: white;
+    margin: 0;
+  }
+  
+  
+  /* CSS Grid container  */
+   .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'navleft navleft navleft navleft navright navright'
+        'header header header header header header' 
+        'left left left right right right' 
+        'footer footer footer footer footer footer';
+  }
+  
+
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        'navleft navleft navleft'
+        'navright navright navright'
+        'header header header' 
+        'left left left' 
+        'right right right' 
+        'footer footer footer';
+      .navright {
+        text-align: left;
+      }
+      .header {
+        font-size: 15px;
+      }
+      .left h2,
+      .right h2 {
+        font-size: 22px;
+      }
+      .left p,
+      .right p {
+        font-size: 15px;
+      }
+      .footer {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  
